@@ -1,0 +1,12 @@
+{
+  "name": "reactive-contact-search",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd contact-search && npm install && npm run build"
+  },
+  "repository": "git@github.com:jMac029/reactive-contact-search.git",
+  "author": "James McMillan <jmcmillan29@gmail.com>",
+  "license": "MIT"
+}
