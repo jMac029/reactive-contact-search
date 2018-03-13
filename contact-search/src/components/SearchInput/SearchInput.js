@@ -1,24 +1,31 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './SearchInput.css';
 
-class SearchInput extends React.Component{
+class SearchInput extends React.Component {
+  handleSearch() {
+    const val = this.myValue.value;
+    console.log(val);
+    this.props.filterUpdate(val);
+  };
 
-  static propTypes = {
-    search: PropTypes.string,
-    updateSearch: PropTypes.func
-  }
-
-  handleSearch = event => {
-    const updatedSearch = event.target.value.substr(0,50)
-    this.props.updateSearch(updatedSearch)
+  componentDidMount(){
+    this.myValue.focus()
   };
 
   render(){
     return (
-      <div>
-        <input className="search" name="search" placeholder="Search" value={this.props.search} type="search" aria-label="Search" onChange={this.handleSearch} />
-      </div>
+      <form>
+        <input 
+        className="search" 
+        name="search" 
+        type="text" 
+        ref={(value) => {this.myValue = value}} 
+        placeholder="Search" 
+        value={this.props.search}  
+        aria-label="Search" 
+        onChange={this.handleSearch.bind(this)} 
+        />
+      </form>
     );
   }
 }

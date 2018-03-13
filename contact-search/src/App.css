@@ -1,18 +1,19 @@
 .App {
   width: 800px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 25px auto;
 }
 
 .App-header {
-  background-color: #526CDE;
-  padding: 20px;
+  background-color: rgb(32, 119, 6);
+  padding: 30px;
   color: white;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .App-content {
-  background-color: #EFEFEF;
+  background-color: #999797;
   min-height: 100vh;
-  padding: 20px;
+  padding: 30px;
   display: flex;
 }
